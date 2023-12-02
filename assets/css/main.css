@@ -1,0 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poly&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poly&family=Poppins:wght@300;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
