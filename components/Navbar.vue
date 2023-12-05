@@ -3,15 +3,8 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <a
-        href=""
-        class="flex items-center space-x-3 rtl:space-x-reverse"
-      >
-        <img
-          src="/icon/Buketin.png"
-          class="h-8"
-          alt="Buketin Logo"
-        />
+      <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/icon/Buketin.png" class="h-8" alt="Buketin Logo" />
       </a>
       <div class="flex md:order-2">
         <button
@@ -68,34 +61,34 @@
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-none md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-none dark:bg-gray-800 md:dark:bg-white dark:border-gray-700"
         >
           <li>
-            <a
-              href="/"
-              class="block py-2 px-3 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#bb8d30] md:p-0 md:dark:hover:text-[#bb8d30] dark:text-white dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
+            <NuxtLink
+              to="/"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#bb8d30] md:p-0 md:dark:hover:text-[#bb8d30] dark:text-white dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
               aria-current="page"
-              >Home</a
+              >Home</NuxtLink
             >
           </li>
           <li>
-            <a
-              href="/catalogue"
-              class="block py-2 px-3 text-white  rounded hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-[#bb8d30] md:p-0 md:dark:hover:text-[#bb8d30] dark:text-white dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
-              >Catalogue</a
+            <NuxtLink
+              to="/catalogue"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#bb8d30] md:p-0 md:dark:hover:text-[#bb8d30] dark:text-white dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
+              >Catalogue</NuxtLink
             >
           </li>
           <li>
-            <a
-              href="#"
+            <NuxtLink
+              to="/"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#bb8d30] md:p-0 dark:text-white md:dark:hover:text-[#bb8d30] dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
-              >About Us</a
+              >About Us</NuxtLink
             >
           </li>
           <li class="flex space-x-1">
-            
-            <a href=""
-            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#bb8d30] md:p-0 dark:text-white md:dark:hover:text-[#bb8d30] dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
-            >Cart</a
+            <NuxtLink
+              to="/"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#bb8d30] md:p-0 dark:text-white md:dark:hover:text-[#bb8d30] dark:hover:bg-gray-700 hover:text-black md:dark:hover:bg-transparent dark:border-gray-700 font-main font-light active:bg-[#bb8d30]"
+              >Cart</NuxtLink
             >
-            <img src="/icon/mdi_cart-outline.svg" alt="cart_svg">
+            <img src="/icon/mdi_cart-outline.svg" alt="cart_svg" />
           </li>
         </ul>
       </div>
@@ -108,7 +101,7 @@ import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
 
 // initialize components based on data attribute selectors
-onMounted(() => {   
+onMounted(() => {
   initFlowbite();
 });
 </script>
