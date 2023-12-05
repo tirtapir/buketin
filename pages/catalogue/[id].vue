@@ -28,7 +28,8 @@
           </div>
 
           <div
-            class="bg-[#BB9393] rounded-lg w-full flex justify-around items-center gap-5 p-5"
+            @click="handleTransaction"
+            class="bg-[#BB9393] rounded-lg w-full flex justify-around items-center gap-5 p-5 hover:border-black cursor-pointer"
           >
             <div>
               <p class="text-2xl text-white font-primary font-normal">

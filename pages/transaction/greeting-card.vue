@@ -23,9 +23,9 @@
       <div class="flex justify-between">
         <div class="pl-4">
           <img src="/images/gc1.png" alt="" class="w-[500px]" />
-          <h3 class="text-xl text-[#76402F] font-primary pt-4">
+          <!-- <h3 class="text-xl text-[#76402F] font-primary pt-4">
             Greeting cards 1 of 2 recipients
-          </h3>
+          </h3> -->
         </div>
         <form @submit.prevent="handleGreetingCard">
           <div class="pb-5">

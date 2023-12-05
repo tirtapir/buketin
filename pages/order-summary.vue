@@ -14,7 +14,7 @@
         <div class="flex items-center space-x-8">
           <div class="w-[100px] h-[100px]">
             <img
-              :src="`${useRuntimeConfig().public.API_URL}/image/${
+              :src="`${useRuntimeConfig().public.API_URL}/images/${
                 detailProduct.image
               }`"
               :alt="detailProduct.image"
@@ -23,7 +23,9 @@
           </div>
           <div class="text-[#76402F] font-primary">
             <h3 class="text-lg">{{ detailProduct?.name }}</h3>
-            <h4>Bouquet</h4>
+            <p class="text-sm text-[#76402F] font-primary mb-4">
+              {{ detailProduct.description }}
+            </p>
           </div>
           <div class="h-[100px] border border-[#76402F]"></div>
           <h3 class="text-[#76402F] font-primary text-md">
