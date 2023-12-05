@@ -19,6 +19,11 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "flowbite": "^2.2.0"
+    "@pinia/nuxt": "^0.5.1",
+    "flowbite": "^2.2.0",
+    "pinia": "^2.1.7"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

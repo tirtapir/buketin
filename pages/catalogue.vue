@@ -2,7 +2,7 @@
   <div class="w-full pt-8 px-4 md:px-0">
     <div class="flex md:container md:mx-auto h-[200px]">
       <img src="images/KatalogBar.png" alt="" class="w-1/3" />
-      <div class="w-2/3 bg-[#BB9393] rounded-r-2xl">
+      <div class="w-2/3 bg-[#BB9393] rounded-se-2xl">
         <h1 class="pl-6 pt-4 text-3xl font-primary text-white">
           Choose your Gift or Start Build
         </h1>
@@ -14,7 +14,7 @@
     </div>
 
     <div
-      class="bg-white rounded-md drop-shadow-sm py-4 px-2 md:mx-auto md:container">
+      class="bg-white rounded-b-xl drop-shadow-sm py-4 px-2 md:mx-auto md:container">
       <div class="flex">
         <div class="flex-col">
           <h1
@@ -128,10 +128,53 @@
           </div>
         </div>
 
-        <div class="flex px-[40px]"></div>
+        <div class="flex px-[40px]">
+          <div class="grid grid-cols-3 gap-8">
+            <div class=""
+            v-for="item in items"
+            >
+              <Cards :data="item" ></Cards>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+const items = ref([
+  {
+    id: 'b1',
+    name : 'Roses Bouquet',
+    price : '150000',
+    desc: 'Rangkaian Buket 5 bunga mawar dengan edelweiss sebagai hiasan tambahan',
+    categories : 'Bouquet',
+    occasions : 'anniversary',
+    imgUrl: '/images/buket1.png'
+  },
+
+  {
+    id: 'b2',
+    name : 'Tulip Bouquet',
+    price : '125000',
+    desc: 'Rangkaian Buket 5 bunga Tulip dengan edelweiss sebagai hiasan tambahan',
+    categories : 'Bouquet',
+    occasions : 'anniversary',
+    imgUrl: '/images/buket2.png'
+
+  },
+
+  {
+    id: 'b3',
+    name : 'Lavender Bouquet',
+    price : '150000',
+    desc: 'Rangkaian Buket 15 bunga Lavender dengan edelweiss sebagai hiasan tambahan',
+    categories : 'Bouquet',
+    occasions : 'anniversary',
+    imgUrl: '/images/buket3.png'
+
+  },
+]);
+</script>
