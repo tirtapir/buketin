@@ -27,11 +27,12 @@
             Greeting cards 1 of 2 recipients
           </h3>
         </div>
-        <div class="">
+        <form @submit.prevent="handleGreetingCard">
           <div class="pb-5">
             <h3 class="text-lg text-[#76402F] font-primary">Recipient Name</h3>
             <input
               type="text"
+              v-model="greetingCardPayload.recipient_name"
               class="w-[400px] rounded-lg border border-[#76402F]"
             />
           </div>
@@ -39,6 +40,7 @@
             <h3 class="text-lg text-[#76402F] font-primary">Sender Name</h3>
             <input
               type="text"
+              v-model="greetingCardPayload.sender_name"
               class="w-[400px] rounded-lg border border-[#76402F]"
             />
           </div>
@@ -48,21 +50,44 @@
             </h3>
             <input
               type="text"
+              v-model="greetingCardPayload.message"
               class="w-[400px] h-[80px] rounded-xl border border-[#76402F]"
             />
           </div>
-          <NuxtLink
-            to="/order-summary"
+          <button
+            type="submit"
             class="bg-[#BB9393] rounded-lg py-2 px-4 hover:bg-[#9d6c6c]"
           >
             <span class="text-white text-base font-primary">
               Save Greeting Cards
             </span>
-          </NuxtLink>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+import { useGreetingCardStore } from "../../store/greeting-card";
+
+const greetingCardStore = useGreetingCardStore();
+
+const greetingCardPayload = ref({
+  recipient_name: null,
+  sender_name: null,
+  message: null,
+});
+
+const handleGreetingCard = () => {
+  greetingCardStore.recipient_name = greetingCardPayload.value.recipient_name;
+  greetingCardStore.sender_name = greetingCardPayload.value.sender_name;
+  greetingCardStore.message = greetingCardPayload.value.message;
+  navigateTo("/order-summary");
+  console.log(
+    greetingCardStore.recipient_name,
+    greetingCardStore.sender_name,
+    greetingCardStore.message
+  );
+};
+</script>

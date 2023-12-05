@@ -6,7 +6,7 @@
       <img
         class="rounded-t-lg"
         :src="`${useRuntimeConfig().public.API_URL}/images/${data.image}`"
-        alt=""
+        :alt="data.image"
       />
       <div class="p-5">
         <h5

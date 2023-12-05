@@ -43,7 +43,7 @@
               Rp. {{ detailProduct.price }},-
             </p>
 
-            <NuxtLink to="/transaction/greeting-card">
+            <button @click="handleTransaction">
               <svg
                 class="fill-white"
                 height="60"
@@ -63,7 +63,7 @@
 	C255,161.018,253.42,157.202,250.606,154.389z"
                 />
               </svg>
-            </NuxtLink>
+            </button>
           </div>
         </div>
       </div>
@@ -72,11 +72,14 @@
 </template>
 
 <script setup>
+import { useTransactionStore } from "../../store/transaction";
+
+const transactionStore = useTransactionStore();
+
 const config = useRuntimeConfig();
 const route = useRoute().params;
 
 const detailProduct = ref(null);
-
 const count = ref(0);
 
 const { data: dataProduct } = await useFetch(
@@ -87,6 +90,13 @@ const { data: dataProduct } = await useFetch(
     },
   }
 );
+
+const handleTransaction = () => {
+  transactionStore.id_product = detailProduct.value._id;
+  transactionStore.total_price = detailProduct.value.price;
+  console.log(transactionStore.id_product, transactionStore.total_price);
+  navigateTo("/transaction/greeting-card");
+};
 
 const increment = function () {
   count.value++;
