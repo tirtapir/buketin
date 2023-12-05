@@ -1,7 +1,7 @@
 <template>
   <div class="w-full pt-8 px-4 md:px-0">
     <div class="flex md:container md:mx-auto h-[200px]">
-      <img src="images/KatalogBar.png" alt="" class="w-1/3" />
+      <img src="/images/katalogBar.png" alt="" class="w-1/3" />
       <div class="w-2/3 bg-[#BB9393] rounded-se-2xl">
         <h1 class="pl-6 pt-4 text-3xl font-primary text-white">
           Choose your Gift or Start Build
@@ -17,7 +17,7 @@
       class="bg-white rounded-b-xl drop-shadow-sm py-4 px-2 md:mx-auto md:container"
     >
       <div class="flex">
-        <div class="flex-col">
+        <!-- <div class="flex-col">
           <h1
             class="flex-none mb-2 text-[#76402F] text-xl font-primary font-light"
           >
@@ -60,7 +60,7 @@
               <p>{{ occasion.name }}</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="flex px-[40px]">
           <div class="grid grid-cols-3 gap-8">
