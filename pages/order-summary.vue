@@ -71,8 +71,7 @@
           This information will help us to ensure that your greeting card arrives safely and on time.
           <br>
           <span class="font-bold italic">
-            Please note that the item you will be receiving is a greeting card. This card should be given to the recipient
-            of your gift..
+            Please note that the item you will be receiving is a <span class="font-bold">greeting card</span>. However, you can also choose to have the card sent directly to the recipient.
           </span>
         </p>
         <div class="py-6 space-y-3">

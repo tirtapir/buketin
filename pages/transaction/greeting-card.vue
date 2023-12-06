@@ -17,9 +17,9 @@
     <div
       class="bg-white rounded-b-2xl drop-shadow-sm py-4 px-4 md:mx-auto md:container"
     >
-      <h1 class="text-xl text-[#76402F] font-primary pb-8">
+      <!-- <h1 class="text-xl text-[#76402F] font-primary pb-8">
         Choose Your Greeting Card Templates
-      </h1>
+      </h1> -->
       <div class="flex justify-between">
         <div class="pl-4">
           <img src="/images/gc1.png" alt="" class="w-[500px]" />
