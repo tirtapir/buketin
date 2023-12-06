@@ -26,19 +26,21 @@
               <label for="name" class="text-2xl">Name : </label>
               <input type="text" id="name"
                 class="border border-[#ae8477] rounded-xl block w-full placeholder:text-[#dfbfb6]"
-                placeholder="Please enter your full name." v-model="receiverPayload.name"/>
+                placeholder="Please enter your full name." v-model="receiverPayload.receiver_name" />
             </div>
             <div class="space-y-2 mb-4">
               <label for="phone" class="text-2xl">WhatsApp Number : </label>
               <input type="text" id="phone"
                 class="border border-[#ae8477] rounded-xl block w-full placeholder:text-[#dfbfb6]"
-                placeholder="Please enter your WhatsApp number. This number must be active." v-model="receiverPayload.whatsapp_number" />
+                placeholder="Please enter your WhatsApp number. This number must be active."
+                v-model="receiverPayload.receiver_wa" />
             </div>
 
             <div class="space-y-2 mb-4">
               <label for="address" class="text-2xl">Shipping Address :</label>
               <textarea id="address" class="border border-[#ae8477] rounded-xl block w-full placeholder:text-[#dfbfb6]"
-                placeholder="Please enter the shipping address for your gift." v-model="receiverPayload.shipping_address"/>
+                placeholder="Please enter the shipping address for your gift."
+                v-model="receiverPayload.receiver_address" />
             </div>
 
             <div>
@@ -77,9 +79,9 @@ const status = ref()
 const config = useRuntimeConfig()
 const route = useRoute();
 const receiverPayload = ref({
-  name: null,
-  whatsapp_number: null,
-  shipping_address: null,
+  receiver_name: null,
+  receiver_wa: null,
+  receiver_address: null,
 })
 
 await useFetch(`/transaction/${route.params.id}`, {
@@ -95,7 +97,10 @@ const claim = async () => {
     baseURL: config.public.API_URL,
     method: 'PUT',
     body: {
-      receiver: receiverPayload.value
+      receiver_address: receiverPayload.value.receiver_address,
+      receiver_wa: receiverPayload.value.receiver_wa,
+      receiver_name: receiverPayload.value.receiver_name,
+      status: "proses gift"
     },
     onResponse({ response }) {
       status.value = response._data.transactionData.status
