@@ -164,7 +164,7 @@ const submitOrder = async () => {
       total_price: transactionStore.data.total_price,
       buyer_name: shippingPayload.value.name,
       buyer_wa: shippingPayload.value.whatsapp_number,
-      buyer_address: shippingPayload.value.whatsapp_number,
+      buyer_address: shippingPayload.value.shipping_address,
       status: 'belum dibayar',
       receiver_name: " ",
       receiver_wa: " ",
