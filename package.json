@@ -1,5 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "buketin-fe",
+  "engines": {
+    "node": "20.x"
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +10,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
+
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -22,8 +27,5 @@
     "@pinia/nuxt": "^0.5.1",
     "flowbite": "^2.2.0",
     "pinia": "^2.1.7"
-  },
-  "overrides": {
-    "vue": "latest"
   }
 }
